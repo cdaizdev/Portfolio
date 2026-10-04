@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoTech Summit 2026 | Tecnología y Sostenibilidad</title>
-    
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,7 +14,7 @@
                         eco: {
                             50: '#F4FBF1',
                             100: '#E7F7E3',
-                            200: '#ACEB98', // Color principal solicitado
+                            200: '#ACEB98',
                             300: '#8CE471',
                             400: '#5FDC3A',
                             500: '#3EC417',
@@ -34,16 +33,13 @@
             }
         }
     </script>
-
-    <!-- FontAwesome for icons -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Animate.css for entrance animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <!-- Google Fonts Inter -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
     <style>
         .glass-nav {
             background: rgba(13, 27, 18, 0.85);
@@ -61,12 +57,9 @@
     </style>
 </head>
 <body class="bg-eco-dark text-gray-100 font-sans antialiased selection:bg-eco-200 selection:text-eco-900">
-
-    <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-eco-200/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
                 <a href="#" class="flex items-center space-x-3 group">
                     <div class="w-10 h-10 rounded-xl bg-eco-200 flex items-center justify-center text-eco-dark font-black text-xl transition-transform group-hover:scale-105">
                         <i class="fa-solid fa-leaf"></i>
@@ -76,34 +69,27 @@
                         <span class="text-xs text-gray-400 tracking-wider">SUMMIT</span>
                     </div>
                 </a>
-
-                <!-- Desktop Nav Links -->
-                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                     <a href="#about" class="text-gray-300 hover:text-eco-200 transition-colors">Acerca</a>
                     <a href="#speakers" class="text-gray-300 hover:text-eco-200 transition-colors">Oradores</a>
                     <a href="#agenda" class="text-gray-300 hover:text-eco-200 transition-colors">Agenda</a>
                     <a href="#tickets" class="text-gray-300 hover:text-eco-200 transition-colors">Entradas</a>
                     <a href="#contacto" class="text-gray-300 hover:text-eco-200 transition-colors">Contacto</a>
                 </nav>
-
-                <!-- CTA Button -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-4">
                     <a href="#tickets" class="bg-eco-200 text-eco-dark font-bold px-6 py-2.5 rounded-full hover:bg-eco-300 transition-all transform hover:-translate-y-0.5 glow-btn">
                         Comprar Entradas
                     </a>
                 </div>
-
-                <!-- Mobile menu button -->
-                <div class="lg:hidden flex items-center">
+                
+                <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-eco-carddark border-b border-eco-200/10 px-4 pt-2 pb-6 space-y-3">
+        <div id="mobile-menu" class="hidden md:hidden bg-eco-carddark border-b border-eco-200/10 px-4 pt-2 pb-6 space-y-3">
             <a href="#about" class="block py-2 text-gray-300 hover:text-eco-200 font-medium">Acerca</a>
             <a href="#speakers" class="block py-2 text-gray-300 hover:text-eco-200 font-medium">Oradores</a>
             <a href="#agenda" class="block py-2 text-gray-300 hover:text-eco-200 font-medium">Agenda</a>
@@ -116,33 +102,25 @@
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center hero-gradient pt-24 pb-16 overflow-hidden">
-        <!-- Background decorative blur elements -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-eco-200/10 rounded-full filter blur-3xl pointer-events-none"></div>
         <div class="absolute top-1/2 -right-20 w-80 h-80 bg-eco-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left text content -->
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left animate__animated animate__fadeInLeft">
                     <div class="inline-flex items-center space-x-2 bg-eco-carddark border border-eco-200/30 px-4 py-2 rounded-full text-eco-200 text-sm font-semibold tracking-wide">
                         <span class="w-2.5 h-2.5 rounded-full bg-eco-200 animate-pulse"></span>
-                        <span>14 - 16 de Noviembre, 2026 • Palacio de Congresos, Madrid</span>
+                        <p>14 - 16 de Noviembre, 2026 <span class="md:inline-flex hidden">• Palacio de Congresos, Madrid</span></p>
                     </div>
-
                     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
                         Tecnología que <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-eco-200 to-eco-400">transforma el planeta</span>
                     </h1>
-
                     <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 font-light">
                         Únete al encuentro global más importante de innovación verde, inteligencia artificial para la sostenibilidad y transición energética limpia.
                     </p>
-
-                    <!-- Event Quick Badges -->
+                    
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2 text-sm text-gray-300">
                         <div class="flex items-center space-x-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
                             <i class="fa-solid fa-users text-eco-200"></i>
@@ -157,8 +135,7 @@
                             <span>Híbrido & Presencial</span>
                         </div>
                     </div>
-
-                    <!-- Call To Action Buttons -->
+                    
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
                         <a href="#tickets" class="w-full sm:w-auto text-center bg-eco-200 text-eco-dark font-extrabold px-8 py-4 rounded-2xl hover:bg-eco-300 transition-all transform hover:-translate-y-1 glow-btn text-lg">
                             Reservar mi Plaza <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
@@ -168,16 +145,12 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Right visual element / Image card stack -->
                 <div class="lg:col-span-5 relative animate__animated animate__fadeInRight">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Main Image -->
+                        
                         <div class="rounded-3xl overflow-hidden border border-eco-200/30 glow-box shadow-2xl relative">
                             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80" alt="EcoTech Summit Conference" class="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-eco-dark via-transparent to-transparent opacity-80"></div>
-                            
-                            <!-- Floating badge overlay -->
                             <div class="absolute bottom-6 left-6 right-6 bg-eco-dark/90 backdrop-blur-md p-5 rounded-2xl border border-eco-200/20 flex items-center justify-between">
                                 <div class="flex items-center space-x-4">
                                     <div class="w-12 h-12 rounded-xl bg-eco-200 text-eco-dark flex items-center justify-center font-bold text-xl">
@@ -191,8 +164,7 @@
                                 <span class="text-xs bg-eco-200/20 text-eco-200 px-3 py-1 rounded-full font-medium border border-eco-200/30">¡Últimas plazas!</span>
                             </div>
                         </div>
-
-                        <!-- Decorative small card -->
+                        
                         <div class="absolute -top-6 -right-6 hidden sm:flex items-center space-x-3 bg-eco-carddark p-4 rounded-2xl border border-eco-200/20 shadow-xl animate-bounce duration-1000">
                             <div class="w-10 h-10 rounded-full bg-eco-200/20 text-eco-200 flex items-center justify-center">
                                 <i class="fa-solid fa-bolt"></i>
@@ -204,12 +176,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- About Event Section -->
     <section id="about" class="py-24 bg-[#0a140e] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -217,9 +186,8 @@
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white">El epicentro donde la tecnología impulsa la sostenibilidad</h2>
                 <p class="text-gray-400 text-base sm:text-lg">Conectamos a líderes tecnológicos, fundadores de startups, científicos y legisladores para crear soluciones escalables frente a la crisis climática.</p>
             </div>
-
-            <!-- Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="bg-eco-carddark p-8 rounded-3xl border border-eco-200/10 hover:border-eco-200/40 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 rounded-2xl bg-eco-200/10 text-eco-200 flex items-center justify-center text-2xl mb-6 group-hover:bg-eco-200 group-hover:text-eco-dark transition-all">
@@ -228,7 +196,6 @@
                     <h3 class="text-xl font-bold text-white mb-3">Keynotes Magistrales</h3>
                     <p class="text-gray-400 leading-relaxed">Conferencias inspiradoras impartidas por los mayores referentes mundiales en tecnologías verdes y descarbonización.</p>
                 </div>
-
                 <!-- Card 2 -->
                 <div class="bg-eco-carddark p-8 rounded-3xl border border-eco-200/10 hover:border-eco-200/40 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 rounded-2xl bg-eco-200/10 text-eco-200 flex items-center justify-center text-2xl mb-6 group-hover:bg-eco-200 group-hover:text-eco-dark transition-all">
@@ -237,7 +204,6 @@
                     <h3 class="text-xl font-bold text-white mb-3">Networking Exclusivo</h3>
                     <p class="text-gray-400 leading-relaxed">Espacios diseñados para conectar inversores de venture capital con emprendedores de tecnología sostenible.</p>
                 </div>
-
                 <!-- Card 3 -->
                 <div class="bg-eco-carddark p-8 rounded-3xl border border-eco-200/10 hover:border-eco-200/40 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 rounded-2xl bg-eco-200/10 text-eco-200 flex items-center justify-center text-2xl mb-6 group-hover:bg-eco-200 group-hover:text-eco-dark transition-all">
@@ -249,8 +215,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Featured Speakers Section -->
     <section id="speakers" class="py-24 bg-eco-dark relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
@@ -266,8 +230,7 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Speakers Grid -->
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Speaker 1 -->
                 <div class="bg-eco-carddark rounded-3xl overflow-hidden border border-eco-200/10 hover:border-eco-200/30 transition-all duration-300 group">
@@ -288,7 +251,6 @@
                         <p class="text-gray-400 text-xs">Pionera en algoritmos de aprendizaje automático de bajo consumo energético.</p>
                     </div>
                 </div>
-
                 <!-- Speaker 2 -->
                 <div class="bg-eco-carddark rounded-3xl overflow-hidden border border-eco-200/10 hover:border-eco-200/30 transition-all duration-300 group">
                     <div class="relative overflow-hidden aspect-square">
@@ -308,7 +270,6 @@
                         <p class="text-gray-400 text-xs">Inversor de impacto enfocado en redes eléctricas inteligentes y almacenamiento.</p>
                     </div>
                 </div>
-
                 <!-- Speaker 3 -->
                 <div class="bg-eco-carddark rounded-3xl overflow-hidden border border-eco-200/10 hover:border-eco-200/30 transition-all duration-300 group">
                     <div class="relative overflow-hidden aspect-square">
@@ -328,7 +289,6 @@
                         <p class="text-gray-400 text-xs">Asesoramiento gubernamental sobre regulación de emisiones en la nube.</p>
                     </div>
                 </div>
-
                 <!-- Speaker 4 -->
                 <div class="bg-eco-carddark rounded-3xl overflow-hidden border border-eco-200/10 hover:border-eco-200/30 transition-all duration-300 group">
                     <div class="relative overflow-hidden aspect-square">
@@ -351,8 +311,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Agenda Section -->
     <section id="agenda" class="py-24 bg-[#0a140e] relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
@@ -360,8 +318,6 @@
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Agenda del Evento</h2>
                 <p class="text-gray-400">Tres días intensivos de conferencias, paneles de debate y demostraciones en vivo.</p>
             </div>
-
-            <!-- Day Tabs -->
             <div class="flex justify-center mb-12">
                 <div class="inline-flex bg-eco-carddark p-1.5 rounded-2xl border border-eco-200/20">
                     <button onclick="switchDay(1)" id="day-btn-1" class="px-6 py-3 rounded-xl font-bold text-sm transition-all bg-eco-200 text-eco-dark shadow-md">Día 1: 14 Nov</button>
@@ -369,8 +325,6 @@
                     <button onclick="switchDay(3)" id="day-btn-3" class="px-6 py-3 rounded-xl font-bold text-sm transition-all text-gray-300 hover:text-white">Día 3: 16 Nov</button>
                 </div>
             </div>
-
-            <!-- Agenda Content Container -->
             <div id="day-content-1" class="space-y-4 animate__animated animate__fadeIn">
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-eco-200/30 transition-all">
                     <div class="flex items-start sm:items-center space-x-4">
@@ -384,7 +338,6 @@
                     </div>
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Auditorio Principal</span>
                 </div>
-
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-eco-200/30 transition-all">
                     <div class="flex items-start sm:items-center space-x-4">
                         <div class="bg-eco-200/10 text-eco-200 font-bold px-4 py-2 rounded-xl text-sm border border-eco-200/20">
@@ -397,7 +350,6 @@
                     </div>
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Keynote Stage</span>
                 </div>
-
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-eco-200/30 transition-all">
                     <div class="flex items-start sm:items-center space-x-4">
                         <div class="bg-eco-200/10 text-eco-200 font-bold px-4 py-2 rounded-xl text-sm border border-eco-200/20">
@@ -410,7 +362,6 @@
                     </div>
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Sala de Inversión</span>
                 </div>
-
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-eco-200/30 transition-all">
                     <div class="flex items-start sm:items-center space-x-4">
                         <div class="bg-eco-200/10 text-eco-200 font-bold px-4 py-2 rounded-xl text-sm border border-eco-200/20">
@@ -424,8 +375,6 @@
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Laboratorio B</span>
                 </div>
             </div>
-
-            <!-- Day 2 Content (Hidden by default) -->
             <div id="day-content-2" class="space-y-4 hidden animate__animated animate__fadeIn">
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="flex items-start sm:items-center space-x-4">
@@ -448,8 +397,6 @@
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Auditorio Principal</span>
                 </div>
             </div>
-
-            <!-- Day 3 Content (Hidden by default) -->
             <div id="day-content-3" class="space-y-4 hidden animate__animated animate__fadeIn">
                 <div class="bg-eco-carddark p-6 rounded-2xl border border-eco-200/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="flex items-start sm:items-center space-x-4">
@@ -472,11 +419,8 @@
                     <span class="text-xs bg-white/5 text-gray-300 px-3 py-1.5 rounded-full border border-white/10">Auditorio Principal</span>
                 </div>
             </div>
-
         </div>
     </section>
-
-    <!-- Tickets / Pricing Section -->
     <section id="tickets" class="py-24 bg-eco-dark relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -484,10 +428,7 @@
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Selecciona tu Entrada</h2>
                 <p class="text-gray-400">Asegura tu lugar en el evento tecnológico más transformador del año. Plazas limitadas.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                
-                <!-- Ticket 1: Virtual -->
                 <div class="bg-eco-carddark rounded-3xl p-8 border border-eco-200/10 flex flex-col justify-between hover:border-eco-200/30 transition-all">
                     <div>
                         <div class="flex justify-between items-center mb-6">
@@ -510,8 +451,6 @@
                         Comprar Virtual
                     </button>
                 </div>
-
-                <!-- Ticket 2: General (Featured) -->
                 <div class="bg-eco-carddark rounded-3xl p-8 border-2 border-eco-200 relative flex flex-col justify-between glow-box transform lg:-translate-y-4">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-eco-200 text-eco-dark font-extrabold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">
                         Más Popular
@@ -538,8 +477,6 @@
                         Reservar General
                     </button>
                 </div>
-
-                <!-- Ticket 3: VIP / All Access -->
                 <div class="bg-eco-carddark rounded-3xl p-8 border border-eco-200/10 flex flex-col justify-between hover:border-eco-200/30 transition-all">
                     <div>
                         <div class="flex justify-between items-center mb-6">
@@ -551,7 +488,6 @@
                             <span class="text-gray-400 text-sm"> + IVA</span>
                         </div>
                         <p class="text-gray-400 text-sm mb-6">Para directivos y ponentes. Acceso VIP con cenas de gala y encuentros privados con inversores.</p>
-                        
                         <ul class="space-y-4 text-sm text-gray-300 mb-8">
                             <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-eco-200"></i><span>Todo lo incluido en General Pass</span></li>
                             <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-eco-200"></i><span>Cena de Gala VIP con ponentes</span></li>
@@ -563,12 +499,9 @@
                         Comprar VIP
                     </button>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- Newsletter & Contact Section -->
     <section id="contacto" class="py-24 bg-[#0a140e] relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="bg-gradient-to-br from-eco-carddark to-eco-dark p-8 sm:p-12 rounded-3xl border border-eco-200/20 glow-box text-center space-y-6">
@@ -577,7 +510,6 @@
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Mantente informado sobre EcoTech 2026</h2>
                 <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">Suscríbete a nuestra newsletter para recibir actualizaciones sobre ponentes confirmados, aperturas de talleres y descuentos exclusivos.</p>
-
                 <form onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
                     <input type="email" required placeholder="Tu correo electrónico" class="flex-grow bg-white/5 border border-eco-200/30 rounded-2xl px-5 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-eco-200 text-sm">
                     <button type="submit" class="bg-eco-200 text-eco-dark font-extrabold px-8 py-4 rounded-2xl hover:bg-eco-300 transition-all text-sm glow-btn">
@@ -590,12 +522,9 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="bg-eco-dark border-t border-eco-200/10 pt-16 pb-12 text-gray-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                <!-- Col 1 -->
                 <div class="space-y-4 md:col-span-1">
                     <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 rounded-lg bg-eco-200 flex items-center justify-center text-eco-dark font-black text-lg">
@@ -611,8 +540,6 @@
                         <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-eco-200 hover:text-eco-dark text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Col 2 -->
                 <div>
                     <h4 class="text-white font-bold mb-4">Enlaces Rápidos</h4>
                     <ul class="space-y-2 text-xs">
@@ -622,8 +549,6 @@
                         <li><a href="#tickets" class="hover:text-eco-200 transition-colors">Comprar Entradas</a></li>
                     </ul>
                 </div>
-
-                <!-- Col 3 -->
                 <div>
                     <h4 class="text-white font-bold mb-4">Legal & Privacidad</h4>
                     <ul class="space-y-2 text-xs">
@@ -633,8 +558,6 @@
                         <li><a href="#" class="hover:text-eco-200 transition-colors">Política de Cookies</a></li>
                     </ul>
                 </div>
-
-                <!-- Col 4 -->
                 <div>
                     <h4 class="text-white font-bold mb-4">Ubicación</h4>
                     <p class="text-xs text-gray-400 mb-2">Palacio de Congresos de Madrid</p>
@@ -642,7 +565,6 @@
                     <p class="text-xs text-eco-200 font-medium"><i class="fa-solid fa-envelope mr-1.5"></i> contacto@ecotechsummit2026.com</p>
                 </div>
             </div>
-
             <div class="border-t border-eco-200/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
                 <p>&copy; 2026 EcoTech Summit. Todos los derechos reservados.</p>
                 <p class="mt-2 sm:mt-0">Diseñado con energía 100% renovable 🌿</p>
@@ -650,7 +572,6 @@
         </div>
     </footer>
 
-    <!-- Ticket Purchase Modal -->
     <div id="ticket-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
         <div class="bg-eco-carddark max-w-md w-full p-8 rounded-3xl border border-eco-200/30 relative animate__animated animate__zoomIn animate__faster">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
@@ -663,7 +584,6 @@
                 <h3 class="text-2xl font-bold text-white" id="modal-title">Adquirir Entrada</h3>
                 <p class="text-xs text-gray-400 mt-1">Completa tus datos para procesar tu registro al EcoTech Summit 2026</p>
             </div>
-
             <form onsubmit="handleCheckout(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-semibold text-gray-300 mb-1">Nombre Completo</label>
@@ -683,8 +603,7 @@
             </form>
         </div>
     </div>
-
-    <!-- Success Notification Toast -->
+    
     <div id="toast" class="fixed bottom-6 right-6 z-50 bg-eco-carddark border border-eco-200 text-white px-6 py-4 rounded-2xl shadow-2xl hidden transform translate-y-20 transition-all duration-300 flex items-center space-x-3">
         <div class="w-8 h-8 rounded-full bg-eco-200 text-eco-dark flex items-center justify-center font-bold">
             <i class="fa-solid fa-check text-xs"></i>
@@ -694,10 +613,8 @@
             <p class="text-xs text-gray-300" id="toast-desc">Te hemos enviado los detalles a tu correo.</p>
         </div>
     </div>
-
-    <!-- JavaScript Interactive Logic -->
+    
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -705,14 +622,12 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu on link click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Agenda Day Switcher
         function switchDay(dayNum) {
             for (let i = 1; i <= 3; i++) {
                 const content = document.getElementById(`day-content-${i}`);
@@ -727,7 +642,6 @@
             }
         }
 
-        // Modal Logic
         const modal = document.getElementById('ticket-modal');
         const modalTitle = document.getElementById('modal-title');
 
@@ -740,14 +654,12 @@
             modal.classList.add('hidden');
         }
 
-        // Close modal on background click
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
             }
         });
 
-        // Newsletter Handler
         function handleNewsletter(e) {
             e.preventDefault();
             const successMsg = document.getElementById('newsletter-success');
@@ -756,7 +668,6 @@
             showToast("Suscripción Exitosa", "Ya formas parte de nuestra comunidad verde.");
         }
 
-        // Checkout Handler
         function handleCheckout(e) {
             e.preventDefault();
             closeModal();
@@ -764,7 +675,6 @@
             e.target.reset();
         }
 
-        // Toast Notification Function
         function showToast(title, desc) {
             const toast = document.getElementById('toast');
             document.getElementById('toast-title').innerText = title;
