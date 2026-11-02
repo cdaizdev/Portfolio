@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+
+    --color-eco-50: #F4FBF1;
+    --color-eco-100: #E7F7E3;
+    --color-eco-200: #ACEB98;
+    --color-eco-300: #8CE471;
+    --color-eco-400: #5FDC3A;
+    --color-eco-500: #3EC417;
+    --color-eco-600: #2E9A10;
+    --color-eco-700: #23770C;
+    --color-eco-800: #195609;
+    --color-eco-900: #103805;
+    --color-eco-dark: #0D1B12;
+    --color-eco-carddark: #14261B;
+}
+
+:root {
+    --bg-primary: var(--color-eco-50);
+    --bg-card: #ffffff;
+    --text-primary: var(--color-eco-900);
+    --text-secondary: var(--color-eco-700);
+    --accent: var(--color-eco-500);
+}
+
+.dark {
+    --bg-primary: var(--color-eco-dark);
+    --bg-card: var(--color-eco-carddark);
+    --text-primary: var(--color-eco-50);
+    --text-secondary: var(--color-eco-200);
+    --accent: var(--color-eco-400);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+}
+
+body {
+    margin: 0;
+}
+
+@layer base {
+
+    h1,
+    h2 {
+        font-family: var(--heading);
+        font-weight: 500;
+        color: var(--text-h);
+    }
+
+    h1 {
+        font-size: 56px;
+        letter-spacing: -1.68px;
+        margin: 32px 0;
+
+        @media (max-width: 1024px) {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 118%;
+        letter-spacing: -0.24px;
+        margin: 0 0 8px;
+
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+@layer component {
+    .glass-nav {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+    }
+
+    .dark .glass-nav {
+        background: rgba(13, 27, 18, 0.85);
+    }
+
+    .hero-gradient {
+        background: radial-gradient(circle at 70% 30%,
+                rgba(172, 235, 152, 0.15) 0%,
+                rgba(13, 27, 18, 0.95) 70%);
+    }
+
+
+    .glow-box {
+        box-shadow: 0 0 35px -5px rgba(172, 235, 152, 0.25);
+    }
+
+    .glow-btn {
+        box-shadow: 0 0 20px rgba(172, 235, 152, 0.4);
+    }
+
+}
