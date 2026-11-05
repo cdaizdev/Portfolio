@@ -1,92 +1,73 @@
-import { ArrowRight, Bot, Code, Gauge, Laptop, Zap } from 'lucide-react'
+import { ArrowDown, ArrowRight, Check, Code2, Terminal } from 'lucide-react'
+
+const codeLines = [
+    { number: '01', content: <><span className="code-purple">const</span> <span className="code-blue">idea</span> = {'{'}</> },
+    { number: '02', content: <>  problema: <span className="code-green">'procesos manuales'</span>,</> },
+    { number: '03', content: <>  objetivo: <span className="code-green">'hacerlo simple'</span>,</> },
+    { number: '04', content: <>  solucion: <span className="code-green">'software a medida'</span>,</> },
+    { number: '05', content: <>  impacto: <span className="code-yellow">true</span></> },
+    { number: '06', content: <>{'}'}</> },
+]
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-eco-50 via-white to-eco-100 pt-24 pb-16 overflow-hidden dark:from-eco-dark dark:via-eco-dark dark:to-eco-carddark">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10 w-full py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div className="lg:col-span-7 space-y-8 text-center lg:text-left animate__animated animate__fadeInLeft">
-                        <div className="inline-flex items-center space-x-2 bg-white border border-eco-700/20 px-4 py-2 rounded-full text-eco-800 text-sm font-semibold tracking-wide dark:bg-eco-carddark dark:border-eco-200/30 dark:text-eco-200">
-                            <span className="w-2.5 h-2.5 rounded-full bg-eco-600 animate-pulse dark:bg-eco-200"></span>
-                            <p>
-                                Software a medida & Automatización inteligente
-                            </p>
-                        </div>
-                        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-eco-900 tracking-tight leading-none dark:text-white">
-                            Impulsamos tu negocio con <br />
-                            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-eco-600 to-eco-800 dark:from-eco-200 dark:to-eco-400">
-                                software a medida
-                            </span>
-                        </h1>
-                        <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 font-light dark:text-gray-300">
-                            Diseñamos y desarrollamos aplicaciones web robustas, software escalable y flujos automatizados para acelerar el crecimiento de tu empresa.
-                        </p>
-                        <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2 text-sm text-eco-800 dark:text-gray-300">
-                            <div className="flex items-center space-x-2 bg-white/70 px-4 py-2 rounded-xl border border-eco-900/10 dark:bg-white/5 dark:border-white/10">
-                                <Code size={16} aria-hidden="true" className="text-eco-700 dark:text-eco-200" />
-                                <span>Desarrollo Web & Apps</span>
-                            </div>
-                            <div className="flex items-center space-x-2 bg-white/70 px-4 py-2 rounded-xl border border-eco-900/10 dark:bg-white/5 dark:border-white/10">
-                                <Bot size={16} aria-hidden="true" className="text-eco-700 dark:text-eco-200" />
-                                <span>Automatización de Procesos</span>
-                            </div>
-                            <div className="flex items-center space-x-2 bg-white/70 px-4 py-2 rounded-xl border border-eco-900/10 dark:bg-white/5 dark:border-white/10">
-                                <Gauge size={16} aria-hidden="true" className="text-eco-700 dark:text-eco-200" />
-                                <span>Alto Rendimiento</span>
-                            </div>
-                        </div>
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                            <a href="#contacto"
-                                className="w-full sm:w-auto text-center bg-eco-700 text-white font-extrabold px-8 py-4 rounded-2xl hover:bg-eco-800 transition-all transform hover:-translate-y-1 glow-btn text-lg dark:bg-eco-200 dark:text-eco-dark dark:hover:bg-eco-300">
-                                Iniciar Proyecto
-                                <ArrowRight size={16} aria-hidden="true" className="ml-2 inline-block align-middle" />
-                            </a>
-                            <a href="#servicios"
-                                className="w-full sm:w-auto text-center bg-eco-900/5 text-eco-900 font-semibold px-8 py-4 rounded-2xl hover:bg-eco-900/10 transition-all border border-eco-900/10 text-lg dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:border-white/10">
-                                Ver Servicios
-                            </a>
-                        </div>
+        <section className="hero" id="inicio">
+            <div className="hero-grid" aria-hidden="true" />
+            <div className="container hero-layout">
+                <div className="hero-copy">
+                    <p className="eyebrow hero-eyebrow"><span className="status-dot" /> DESARROLLO DE SOFTWARE · WEB · AUTOMATIZACIÓN</p>
+                    <h1>Convierto ideas en <span>soluciones digitales</span> que hacen avanzar tu negocio.</h1>
+                    <p className="hero-description">
+                        Diseño y desarrollo productos web y automatizaciones a medida. Tecnología bien pensada, hecha para resolver problemas reales.
+                    </p>
+                    <div className="hero-actions">
+                        <a className="button button-primary" href="#contacto">
+                            Cuéntame tu idea <ArrowRight size={17} aria-hidden="true" />
+                        </a>
+                        <a className="text-link hero-secondary" href="#servicios">
+                            Explorar servicios <ArrowDown size={16} aria-hidden="true" />
+                        </a>
                     </div>
-                    <div className="lg:col-span-5 relative animate__animated animate__fadeInRight">
-                        <div className="relative mx-auto max-w-md lg:max-w-none">
-                            <div className="rounded-3xl overflow-hidden border border-eco-600/30 glow-box shadow-2xl relative dark:border-eco-200/30">
-                                <img src="img/data-stats.avif"
-                                    alt="Desarrollo de software y automatización"
-                                    className="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90 dark:from-eco-dark dark:opacity-80">
-                                </div>
-
-                                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-eco-700/20 flex items-center justify-between dark:bg-eco-dark/90 dark:border-eco-200/20">
-                                    <div className="flex items-center space-x-4">
-                                        <div className="w-12 h-12 rounded-xl bg-eco-700 text-white flex items-center justify-center font-bold text-xl dark:bg-eco-200 dark:text-eco-dark">
-                                            <Laptop size={22} aria-hidden="true" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-eco-900 font-bold dark:text-white">Soluciones a Medida</h4>
-                                            <p className="text-xs text-eco-700 dark:text-eco-200">Escalables y seguras</p>
-                                        </div>
-                                    </div>
-                                    <span className="text-xs bg-eco-700/10 text-eco-800 px-3 py-1 rounded-full font-medium border border-eco-700/20 dark:bg-eco-200/20 dark:text-eco-200 dark:border-eco-200/30">
-                                        Stack Moderno
-                                    </span>
-                                </div>
-                            </div>
-
-                            {/* Tarjeta Flotante Superior */}
-                            <div className="absolute -top-6 -right-6 hidden sm:flex items-center space-x-3 bg-white p-4 rounded-2xl border border-eco-700/20 shadow-xl animate-bounce duration-1000 dark:bg-eco-carddark dark:border-eco-200/20">
-                                <div className="w-10 h-10 rounded-full bg-eco-700/10 text-eco-700 flex items-center justify-center dark:bg-eco-200/20 dark:text-eco-200">
-                                    <Zap size={18} aria-hidden="true" />
-                                </div>
-                                <div>
-                                    <p className="text-xs text-gray-600 dark:text-gray-400">Eficiencia Operativa</p>
-                                    <p className="text-sm font-bold text-eco-900 dark:text-white">+80% Automatizado</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="hero-proof">
+                        <span className="proof-icon"><Check size={15} aria-hidden="true" /></span>
+                        <span>Soluciones claras, escalables y pensadas para personas.</span>
                     </div>
                 </div>
+
+                <div className="code-visual" aria-label="Ilustración de una solución digital en desarrollo">
+                    <div className="code-window">
+                        <div className="window-top">
+                            <div className="window-controls" aria-hidden="true"><i /><i /><i /></div>
+                            <div className="window-tab"><Code2 size={13} aria-hidden="true" /> solution.ts</div>
+                            <Terminal size={15} className="window-terminal" aria-hidden="true" />
+                        </div>
+                        <div className="code-content">
+                            {codeLines.map((line) => (
+                                <div className="code-line" key={line.number}>
+                                    <span className="line-number">{line.number}</span>
+                                    <code>{line.content}</code>
+                                </div>
+                            ))}
+                            <div className="code-cursor" aria-hidden="true" />
+                        </div>
+                        <div className="code-footer">
+                            <span><i className="footer-status" /> Compilación correcta</span>
+                            <span>UTF-8&nbsp; · &nbsp;TypeScript</span>
+                        </div>
+                    </div>
+                    <div className="floating-card floating-card-top">
+                        <span className="floating-card-icon"><Code2 size={17} aria-hidden="true" /></span>
+                        <span><strong>Hecho a medida</strong><small>Para tu forma de trabajar</small></span>
+                    </div>
+                    <div className="floating-card floating-card-bottom">
+                        <span className="floating-spark" aria-hidden="true">✳</span>
+                        <span><strong>Menos fricción.</strong><small>Más tiempo para crecer.</small></span>
+                    </div>
+                    <div className="visual-orbit orbit-one" aria-hidden="true" />
+                    <div className="visual-orbit orbit-two" aria-hidden="true" />
+                </div>
             </div>
+            <a className="hero-scroll" href="#servicios"><span /> Desliza para descubrir</a>
         </section>
     )
 }
