@@ -1,21 +1,20 @@
 import Header from './components/header'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
-import WorkSection from './components/WorkSection'
-import ProcessSection from './components/ProcessSection'
-import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import NotFoundPage from './pages/NotFoundPage'
+import HomePage from './pages/HomePage'
 
 export default function App() {
     return (
         <>
             <Header />
             <main>
-                <HeroSection />
-                <AboutSection />
-                <WorkSection />
-                <ProcessSection />
-                <ContactSection />
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                    </Routes>
+                </BrowserRouter>
             </main>
             <Footer />
         </>
