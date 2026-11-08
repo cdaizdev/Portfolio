@@ -1,7 +1,8 @@
 
 import {
-    ArrowDown, ArrowRight, ArrowUpRight, Check, Code2, MessageCircle, Terminal, Bot, Braces, PanelsTopLeft,
-    Workflow, ShoppingBag, ChartNoAxesCombined, Compass, Lightbulb, Wrench, Rocket, ArrowDownRight
+    ArrowDown, ArrowRight, ArrowUpRight, Code2, MessageCircle, Terminal, Bot, Braces, PanelsTopLeft,
+    Workflow, ShoppingBag, ChartNoAxesCombined, Compass, Lightbulb, Wrench, Rocket, ArrowDownRight,
+    CircleCheckBig
 } from 'lucide-react';
 
 const codeLines = [
@@ -89,63 +90,106 @@ const steps = [
 export default function HomePage() {
     return (
         <>
-            <section className="hero" id="inicio">
+            <section className="relative flex flex-col min-h-40 items-center overflow-hidden pt-32 pb-5 bg-hero" id="inicio">
                 <div className="hero-grid" aria-hidden="true" />
-                <div className="container hero-layout">
-                    <div className="hero-copy">
-                        <p className="eyebrow hero-eyebrow"><span className="status-dot" /> DESARROLLO DE SOFTWARE · WEB · AUTOMATIZACIÓN</p>
-                        <h1>Convierto ideas en <span>soluciones digitales</span> que hacen avanzar tu negocio.</h1>
-                        <p className="hero-description">
-                            Diseño y desarrollo productos web y automatizaciones a medida. Tecnología bien pensada, hecha para resolver problemas reales.
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto">
+                    <div className="">
+                        <div className="flex gap-4 justify-center items-center">
+                            <div className='flex gap-4 justify-center items-center bg-primary/20 py-1 px-4 rounded-full border border-primary'>
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                </span>
+                                <p className='text-primary text-sm'>
+                                    DESARROLLO DE SOFTWARE · WEB · AUTOMATIZACIÓN
+                                </p>
+                            </div>
+                        </div>
+                        <h1 className='text-white'>Convierto ideas en <span className='text-primary'>soluciones digitales</span> que hacen avanzar tu negocio.</h1>
+                        <p className="text-muted">
+                            Diseño y desarrollo productos web y automatizaciones a medida.
+                            Tecnología bien pensada, hecha para resolver problemas reales.
                         </p>
-                        <div className="hero-actions">
-                            <a className="button button-primary" href="#contacto">
+                        <div className="flex items-center gap-6 mt-6">
+                            <a className="btn btn-primary py-4" href="#contacto">
                                 Cuéntame tu idea <ArrowRight size={17} aria-hidden="true" />
                             </a>
-                            <a className="text-link hero-secondary" href="#servicios">
+                            <a className="btn btn-outline-primary py-4" href="#servicios">
                                 Explorar servicios <ArrowDown size={16} aria-hidden="true" />
                             </a>
                         </div>
-                        <div className="hero-proof">
-                            <span className="proof-icon"><Check size={15} aria-hidden="true" /></span>
+                        <div className="flex items-center gap-4 mt-6 text-muted text-sm">
+                            <span><CircleCheckBig className="h-4 w-4" aria-hidden="true" /></span>
                             <span>Soluciones claras, escalables y pensadas para personas.</span>
                         </div>
                     </div>
 
-                    <div className="code-visual" aria-label="Ilustración de una solución digital en desarrollo">
-                        <div className="code-window">
-                            <div className="window-top">
-                                <div className="window-controls" aria-hidden="true"><i /><i /><i /></div>
-                                <div className="window-tab"><Code2 size={13} aria-hidden="true" /> solution.ts</div>
-                                <Terminal size={15} className="window-terminal" aria-hidden="true" />
+                    <div className="relative flex min-h-[390px] items-center justify-center" aria-label="Ilustración de una solución digital en desarrollo">
+
+                        {/* Ventana de Código 3D */}
+                        <div className="relative z-10 w-full max-w-[430px] overflow-hidden rounded-[13px] border border-[rgb(225_237_225/14%)] bg-[#151f19] shadow-[0_28px_90px_rgb(0_0_0/35%),0_0_80px_rgb(166_211_125/5%)] [transform:perspective(1000px)_rotateY(-5deg)_rotateX(2deg)]">
+
+                            {/* Cabecera de la ventana */}
+                            <div className="flex h-[47px] items-center justify-between px-[15px] border-b border-white/[0.07] bg-[#18231c]">
+                                <div className="flex gap-[5px]" aria-hidden="true">
+                                    <span className="w-[7px] h-[7px] rounded-full bg-[#ef7c6a] inline-block"></span>
+                                    <span className="w-[7px] h-[7px] rounded-full bg-[#e8c15d] inline-block"></span>
+                                    <span className="w-[7px] h-[7px] rounded-full bg-[#80bb67] inline-block"></span>
+                                </div>
+
+                                <div className="flex items-center gap-[7px] text-[#c7d0c8] font-mono text-[10px]">
+                                    <Code2 size={13} className="text-[var(--color-primary)]" aria-hidden="true" /> solution.py
+                                </div>
+
+                                <Terminal size={15} className="text-[#87958a]" aria-hidden="true" />
                             </div>
-                            <div className="code-content">
+
+                            {/* Contenido del editor */}
+                            <div className="relative min-h-[246px] p-[25px_24px_23px] font-mono text-[12px] leading-[2.15]">
                                 {codeLines.map((line) => (
-                                    <div className="code-line" key={line.number}>
-                                        <span className="line-number">{line.number}</span>
-                                        <code>{line.content}</code>
+                                    <div className="flex gap-5 whitespace-pre" key={line.number}>
+                                        <span className="text-[#536258] select-none">{line.number}</span>
+                                        <code className="text-[#d5ded6]">{line.content}</code>
                                     </div>
                                 ))}
-                                <div className="code-cursor" aria-hidden="true" />
+                                <div className="absolute bottom-[42px] left-[39px] w-[7px] h-[15px] bg-[var(--color-primary)] opacity-80 animate-pulse" aria-hidden="true" />
                             </div>
-                            <div className="code-footer">
-                                <span><i className="footer-status" /> Compilación correcta</span>
-                                <span>UTF-8&nbsp; · &nbsp;TypeScript</span>
+
+                            {/* Pie de la ventana */}
+                            <div className="flex h-[34px] items-center justify-between px-[14px] border-t border-white/[0.07] text-[#819087] font-mono text-[8px]">
+                                <span className="flex items-center gap-[6px]">
+                                    <span className="w-[5px] h-[5px] rounded-full bg-[var(--color-primary)] inline-block"></span> Compilación correcta
+                                </span>
+                                <span>UTF-8 &nbsp;·&nbsp; TypeScript</span>
                             </div>
                         </div>
-                        <div className="floating-card floating-card-top">
-                            <span className="floating-card-icon"><Code2 size={17} aria-hidden="true" /></span>
-                            <span><strong>Hecho a medida</strong><small>Para tu forma de trabajar</small></span>
+
+                        {/* Tarjeta flotante superior */}
+                        <div className="absolute z-25 top-6 -right-[3px] flex items-center gap-[10px] p-[12px_14px] border border-white/10 rounded-[10px] bg-[#202b23] shadow-[0_15px_40px_rgb(0_0_0/25%)]">
+                            <span className="grid w-8 h-8 place-items-center rounded-lg bg-[rgb(200_250_89/12%)] text-[var(--color-primary)]">
+                                <Code2 size={17} aria-hidden="true" />
+                            </span>
+                            <div className="grid gap-[3px]">
+                                <strong className="text-[#f2f5ef] text-[10px]">Hecho a medida</strong>
+                                <small className="text-[#97a49a] text-[8px]">Para tu forma de trabajar</small>
+                            </div>
                         </div>
-                        <div className="floating-card floating-card-bottom">
-                            <span className="floating-spark" aria-hidden="true">✳</span>
-                            <span><strong>Menos fricción.</strong><small>Más tiempo para crecer.</small></span>
+
+                        {/* Tarjeta flotante inferior */}
+                        <div className="absolute z-20 bottom-5 -left-5 flex items-center gap-[10px] p-[12px_14px] border border-white/10 rounded-[10px] bg-[#202b23] shadow-[0_15px_40px_rgb(0_0_0/25%)]">
+                            <span className="text-[var(--color-primary)] text-[25px]" aria-hidden="true">✳</span>
+                            <div className="grid gap-[3px]">
+                                <strong className="text-[#f2f5ef] text-[10px]">Menos fricción.</strong>
+                                <small className="text-[#97a49a] text-[8px]">Más tiempo para crecer.</small>
+                            </div>
                         </div>
-                        <div className="visual-orbit orbit-one" aria-hidden="true" />
-                        <div className="visual-orbit orbit-two" aria-hidden="true" />
+
+                        {/* Órbitas decorativas de fondo */}
+                        <div className="absolute w-[440px] h-[440px] border border-[rgb(198_232_178/8%)] rounded-full pointer-events-none" aria-hidden="true" />
+                        <div className="absolute w-[530px] h-[530px] border border-[rgb(198_232_178/5%)] rounded-full pointer-events-none" aria-hidden="true" />
+
                     </div>
                 </div>
-                <a className="hero-scroll" href="#servicios"><span /> Desliza para descubrir</a>
             </section>
             <section className="section services-section" id="servicios">
                 <div className="container">

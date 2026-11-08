@@ -8,7 +8,7 @@ export default function App() {
     return (
         <>
             <Header />
-            <main>
+            <main className='flex-1 flex flex-col'>
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<HomePage />} />

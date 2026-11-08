@@ -11,30 +11,50 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <header className="site-header">
-            <div className="container header-inner">
-                <a className="brand" href="#inicio" aria-label="cdaizdev, inicio">
-                    <span className="brand-mark" aria-hidden="true">&lt;/&gt;</span>
-                    <span>cdaizdev<span className="brand-dot">.</span></span>
+        <header className="absolute z-20 p-4 inset-x-0 top-0 border-b border-white/9">
+            <div className="flex justify-between items-center max-w-7xl mx-auto">
+                <a className="inline-flex items-center gap-2 font-bold text-[var(--color-bg-alt)]" href="#inicio" aria-label="cdaizdev, inicio">
+                    <span className="grid w-10 h-10 place-items-center border border-primary rounded-xl text-primary text-base font-medium tracking-[-3px]" aria-hidden="true">&lt;/&gt;</span>
+                    <span>cdaizdev<span className="text-primary">.</span></span>
                 </a>
 
-                <nav className={`navigation${isMenuOpen ? ' navigation-open' : ''}`} aria-label="Navegación principal">
+                <nav className="hidden md:flex items-center gap-12 font-semibold" aria-label="Navegación principal escritorio">
                     {links.map((link) => (
-                        <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)}>
+                        <a key={link.href} href={link.href} className="text-sm text-muted hover:text-primary transition-colors duration-200">
                             {link.label}
                         </a>
                     ))}
-                    <a className="nav-mobile-cta" href="#contacto" onClick={() => setIsMenuOpen(false)}>
-                        Hablemos <ArrowUpRight size={16} aria-hidden="true" />
-                    </a>
                 </nav>
 
-                <a className="button button-small header-cta" href="#contacto">
+                <a className="btn btn-primary" href="#contacto">
                     Hablemos <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
 
+                {isMenuOpen && (
+                    <nav className="absolute top-full left-0 w-full bg-[var(--color-bg)] text-[var(--color-text)] p-6 flex flex-col gap-4 shadow-xl border-b border-white/10 md:hidden z-30" aria-label="Navegación móvil">
+                        {links.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-lg font-semibold transition-colors duration-200 hover:text-primary"
+                            >
+                                {link.label}
+                            </a>
+                        ))}
+
+                        <a
+                            className="flex items-center justify-center gap-1 mt-2 w-full py-3 bg-primary text-[#101914] font-medium rounded-xl transition-opacity hover:opacity-90"
+                            href="#contacto"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Hablemos <ArrowUpRight size={16} aria-hidden="true" />
+                        </a>
+                    </nav>
+                )}
+
                 <button
-                    className="menu-toggle"
+                    className="md:hidden p-2 rounded-lg text-[var(--color-bg-alt)] hover:bg-white/5 transition-colors"
                     type="button"
                     aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
                     aria-expanded={isMenuOpen}
